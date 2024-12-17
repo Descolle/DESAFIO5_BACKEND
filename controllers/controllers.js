@@ -53,7 +53,7 @@ export const Obtenerjoyaslimitadas = async ({
 
 export const filtrarjoyas = async ({
   precio_max,
-  stock_min,
+  precio_min,
   categoria,
   metal,
 }) => {
@@ -69,7 +69,7 @@ export const filtrarjoyas = async ({
   };
 
   agregarFiltro("precio", "<=", precio_max);
-  agregarFiltro("stock", ">=", stock_min);
+  agregarFiltro("precio", ">=", precio_min);
   agregarFiltro("categoria", "=", categoria);
   agregarFiltro("metal", "=", metal);
 
